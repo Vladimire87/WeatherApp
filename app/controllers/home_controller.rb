@@ -1,3 +1,5 @@
 class HomeController < ApplicationController
-  def index; end
+  def index
+    @user_ip = request.remote_ip
+  end
 end
