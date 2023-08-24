@@ -1,10 +1,15 @@
-<div class="container mx-auto px-4">
-  <div class="p-5 flex justify-center">
+<div class="container mx-auto px-4 bg-contain bg-center" style="background-image: url('<%= asset_path('background.png')%>')">
+  <div class="mt-14 flex justify-center">
     <%= link_to root_path do %>
-      <%= image_tag 'app_logo.png', style: "height: 70px;" %>
+      <%= image_tag 'app_logo.png', style: "width: 186px;" %>
     <% end %>
   </div>
-  <p>
-    <%= @user_ip %>
-  </p>
+  <div class="mt-48 text-center">
+    <p class="text-white text-2xl font-bold mb-1">
+      Welcome to 
+      <span class="text-blue-light">SkyCast</span>
+    </p>
+    <p class="text-base-gray-200 text-sm font-normal mb-8">Choose a location to view the weather forecast</p>
+    <input type="text" name="" id="" class="h-14 bg-base-gray-600 text-base-gray-400 rounded-lg w-80 text-sm font-normal border-none" placeholder="Search location">
+  </div>
 </div>
