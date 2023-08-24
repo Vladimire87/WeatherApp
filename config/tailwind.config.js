@@ -14,7 +14,12 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif']
       },
       colors: {
-        'golden-rod': '#F7BF4F'
+        'main-bg-900': 'rgb(19, 19, 26)',
+        'golden-rod': '#F7BF4F',
+        'blue-light': 'rgb(144,178,245)',
+        'base-gray-200': 'rgb(191,191,212)',
+        'base-gray-400': 'rgb(127,127,152)',
+        'base-gray-600': 'rgb(30,30,41)'
       }
     }
   },
