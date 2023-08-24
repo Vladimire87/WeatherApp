@@ -21,6 +21,7 @@ class HomeController < ApplicationController
       api_key: 'bc1805a2fb4fe6801980703de9b4f44f'
     )
     @data = client.current_weather(city:)
+    raise
   end
 
   def show; end
