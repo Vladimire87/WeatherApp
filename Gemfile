@@ -5,8 +5,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
+gem 'faraday'
 gem 'importmap-rails'
 gem 'jbuilder'
+gem 'open-weather-ruby-client', '~> 0.4.0'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'
 gem 'redis', '~> 4.0'
@@ -15,7 +17,6 @@ gem 'sqlite3', '~> 1.4'
 gem 'stimulus-rails'
 gem 'tailwindcss-rails'
 gem 'turbo-rails'
-
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
