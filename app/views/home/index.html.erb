@@ -20,11 +20,5 @@
         </svg>
       </span>
     </label>
-    <%= form_tag(home_show_path, data: {turbo: :false}, method: :get ) do %>
-      <%= submit_tag "Submit", class: "bg-base-gray-600 text-base-gray-400 mt-6 p-2 rounded-lg text-md cursor-pointer" %>
-    <% end %>
+    <%= link_to 'Show', home_show_path, class: "bg-base-gray-600 text-base-gray-400 mt-6 p-2 rounded-lg text-md cursor-pointer" %>
   </div>
-  <div class="text-white">
-    real_ip | <%= @real_ip[0] %>
-  </div>
-</div>
