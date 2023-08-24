@@ -3,7 +3,7 @@
 class HomeController < ApplicationController
   def index
     # user_ip = request.remote_ip
-    @real_ip = request.env['HTTP_X_FORWARDED_FOR']
+    @real_ip = request.env['HTTP_X_FORWARDED_FOR'].split(',')
 
     response = Faraday.get("https://api.ipgeolocation.io/ipgeo?apiKey=943115cc753b424aa65feec8e4c2b673&ip=#{@real_ip[0]}")
 
