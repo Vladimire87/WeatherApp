@@ -21,7 +21,6 @@ class HomeController < ApplicationController
     #   @city = request.location.city
     #   @currency = @country.upcase == "AU" ? "AU$" : "$"
     # end
-    raise
   end
 
   def show; end
