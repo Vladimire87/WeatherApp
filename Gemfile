@@ -54,4 +54,4 @@ group :development do
   # gem "spring"
 end
 
-gem "geocoder", "~> 1.8"
+gem 'geocoder', '~> 1.8'
