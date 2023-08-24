@@ -11,7 +11,7 @@
     </p>
     <p class="text-base-gray-200 text-sm font-normal mb-8">Location to view the weather forecast</p>
     <label class="relative">
-      <input type="search" name="" id="" class="h-14 bg-base-gray-600 text-white rounded-lg w-80 text-md font-normal border-none cursor-not-allowed" value="<%= @data %>" disabled>
+      <input type="search" name="" id="" class="h-14 bg-base-gray-600 text-white rounded-lg w-80 text-md font-normal border-none cursor-not-allowed" value="<%= @city %>" disabled>
       <span class="sr-only">Search</span>
       <span class="absolute inset-y-0 right-2 flex items-center pr-4">
         <svg class="motion-reduce:hidden animate-spin mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -23,7 +23,7 @@
     <div class="mt-6">
       <%= link_to 'Show', weather_path, class: "bg-base-gray-600 text-base-gray-400 mt-6 p-3 rounded-lg text-md cursor-pointer" %>
     </div>
-    <p class="text-white">
-      sss <%= @city %>
+    <p class="text-white mt-6">
+      <%= @data %>
     </p>
   </div>
