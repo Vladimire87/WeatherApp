@@ -1,31 +1,25 @@
 <%= turbo_frame_tag "card" do %>
-  <div class="flex justify-center">
+  <div class="flex justify-center font-nunito">
     <div class="Content" style="width: 375px; height: 840px; padding-top: 8px; padding-bottom: 20px; padding-left: 8px; padding-right: 8px; background: #13131A; flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
       <div class="Card" style="align-self: stretch; height: 328px; padding: 12px; background: #16161F; border-radius: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
         <div class="Today" style="width: 335px; height: 304px; position: relative; border-radius: 8px; overflow: hidden; background-image: url(https://via.placeholder.com/335x304)">
           <div class="Background" style="width: 335px; height: 304px; left: 0px; top: 0px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-            <img class="Image" style="width: 335px; height: 304px" src="https://via.placeholder.com/335x304" />
+            <img class="Image" style="width: 335px; height: 304px" src="<%= asset_path('Weather=Few Clouds, Moment=Night.png')%>" />
           </div>
           <div class="Weather" style="padding: 4px; left: 16px; top: 172px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; display: inline-flex">
-            <div class="C" style="text-align: right; color: white; font-size: 48px; font-family: Nunito; font-weight: 800; line-height: 57.60px; word-wrap: break-word">28</div>
+            <div class="C" style="text-align: right; color: white; font-size: 48px; font-family: Nunito; font-weight: 800; line-height: 57.60px; word-wrap: break-word"><%= $data.main.temp_c.round %><span class="font-nunito text-4xl">&#8451;</span> </div>
             <div class="Details" style="flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-              <div class="C32C" style="text-align: center; color: white; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word">26 / 32</div>
-              <div class="PoucasNuvens" style="color: white; font-size: 14px; font-family: Nunito; font-weight: 400; line-height: 19.60px; word-wrap: break-word">Poucas nuvens</div>
+              <div class="C32C" style="text-align: center; color: white; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= $data.main.temp_min_c.round %><span class="font-nunito text-xs">&#8451;</span> / <%= $data.main.temp_max_c.round %><span class="font-nunito text-xs">&#8451;</span></div>
+              <div class="PoucasNuvens" style="color: white; font-size: 14px; font-family: Nunito; font-weight: 400; line-height: 19.60px; word-wrap: break-word"><%= $data["weather"][0]["description"] %></div>
             </div>
           </div>
           <div class="Icons" style="width: 160px; height: 160px; left: 175px; top: 144px; position: absolute">
-            <div class="Light" style="width: 56.21px; height: 78.23px; left: 33.22px; top: 61.58px; position: absolute; transform: rotate(-30deg); transform-origin: 0 0; background: #FFEE94; box-shadow: 53px 53px 53px; filter: blur(53px)"></div>
-            <div class="Cloud" style="width: 63.39px; height: 37.63px; left: 60.23px; top: 26.28px; position: absolute; background: linear-gradient(114deg, white 0%, rgba(255, 255, 255, 0.58) 100%); box-shadow: 0px 11px 10px white inset"></div>
-            <div class="Moon" style="width: 51.31px; height: 71.41px; left: 36.77px; top: 64.55px; position: absolute; transform: rotate(-30deg); transform-origin: 0 0; background: linear-gradient(210deg, #FFEE94 0%, #FF9900 100%); box-shadow: 2.3368074650771686e-16px 4px 8px rgba(255, 255, 255, 0.55) inset"></div>
-            <div class="Cloud" style="width: 63.39px; height: 37.63px; left: 21.33px; top: 82.82px; position: absolute; background: linear-gradient(114deg, white 0%, rgba(255, 255, 255, 0.58) 100%); box-shadow: 0px 11px 10px white inset"></div>
-            <div class="Star" style="width: 9.36px; height: 9.36px; left: 52.94px; top: 42.62px; position: absolute; transform: rotate(135deg); transform-origin: 0 0; background: linear-gradient(253deg, #FF9900 0%, #FFEE94 100%); box-shadow: 2.6842566742717384e-16px 6px 8.767447471618652px #473B89"></div>
-            <div class="Star" style="width: 9.36px; height: 9.36px; left: 113.81px; top: 79px; position: absolute; transform: rotate(135deg); transform-origin: 0 0; background: linear-gradient(253deg, #FF9900 0%, #FFEE94 100%); box-shadow: 2.6842566742717384e-16px 6px 8.767447471618652px #473B89"></div>
-            <div class="Star" style="width: 3.70px; height: 3.70px; left: 36.56px; top: 51.95px; position: absolute; transform: rotate(135deg); transform-origin: 0 0; background: linear-gradient(253deg, #FF9900 0%, #FFEE94 100%); box-shadow: 2.6842566742717384e-16px 6px 8.767447471618652px #473B89"></div>
+            <%= render 'card/clouds' %>
           </div>
           <div class="Info" style="height: 41px; left: 20px; top: 20px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 223px; display: inline-flex">
             <div class="Location" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: flex">
-              <div class="PortoAlegreRs" style="text-align: center; color: #FAFAFA; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word">Porto Alegre, RS</div>
-              <div class="SegundaFeira15DeMaioDe2023" style="text-align: center; color: #FAFAFA; font-size: 12px; font-family: Nunito; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Segunda-feira, 15 de maio de 2023</div>
+              <div class="PortoAlegreRs" style="text-align: center; color: #FAFAFA; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= $data.name %></div>
+              <div class="SegundaFeira15DeMaioDe2023" style="text-align: center; color: #FAFAFA; font-size: 12px; font-family: Nunito; font-weight: 400; line-height: 16.80px; word-wrap: break-word"><%= $data.dt.localtime %></div>
             </div>
           </div>
         </div>
