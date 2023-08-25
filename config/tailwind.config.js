@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif']
       },
       colors: {
         'main-bg-900': 'rgb(19, 19, 26)',
