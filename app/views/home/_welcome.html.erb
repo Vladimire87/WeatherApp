@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "card" do %>
-  <div class="mt-48 text-center">
+  <div class="mt-48 text-center font-lato">
     <p class="text-white text-2xl font-bold mb-1">
       Welcome to 
       <span class="text-blue-light">SkyCast</span>
@@ -16,7 +16,7 @@
       </span>
     </label>
     <div class="mt-6">
-      <%= link_to 'Show', weather_path, class: "bg-base-gray-600 text-base-gray-400 mt-6 p-3 rounded-lg text-md cursor-pointer" %>
+      <%= link_to 'Get Weather', weather_path, class: "bg-base-gray-600 text-base-gray-400 mt-6 p-3 rounded-lg text-md cursor-pointer" %>
     </div>
   </div>
 <% end %>
