@@ -3,10 +3,12 @@
 class HomeController < ApplicationController
   def index
     @city = current_city
-    fetch_weather_data(@city)
   end
 
-  def show; end
+  def show
+    @city = current_city
+    @data = fetch_weather_data(@city)
+  end
 
   private
 
@@ -20,8 +22,9 @@ class HomeController < ApplicationController
 
   def fetch_weather_data(city)
     client = OpenWeather::Client.new(
-      api_key: ENV.fetch('OPENWEATHER_API_KEY', nil)
+      api_key: Rails.application.credentials.openweather_api_key
     )
+
     client.current_weather(city:)
   end
 end
