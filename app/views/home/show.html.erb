@@ -7,10 +7,10 @@
             <img class="Image" style="width: 335px; height: 304px" src="<%= asset_path('Weather=Few Clouds, Moment=Night.png')%>" />
           </div>
           <div class="Weather" style="padding: 4px; left: 16px; top: 172px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; display: inline-flex">
-            <div class="C" style="text-align: right; color: white; font-size: 48px; font-family: Nunito; font-weight: 800; line-height: 57.60px; word-wrap: break-word"><%= $data.main.temp_c.round %><span class="font-nunito text-4xl">&#8451;</span> </div>
+            <div class="C" style="text-align: right; color: white; font-size: 48px; font-family: Nunito; font-weight: 800; line-height: 57.60px; word-wrap: break-word"><%= @data.main.temp_c.round %><span class="font-nunito text-4xl">&#8451;</span> </div>
             <div class="Details" style="flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
-              <div class="C32C" style="text-align: center; color: white; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= $data.main.temp_min_c.round %><span class="font-nunito text-xs">&#8451;</span> / <%= $data.main.temp_max_c.round %><span class="font-nunito text-xs">&#8451;</span></div>
-              <div class="PoucasNuvens" style="color: white; font-size: 14px; font-family: Nunito; font-weight: 400; line-height: 19.60px; word-wrap: break-word"><%= $data["weather"][0]["description"] %></div>
+              <div class="C32C" style="text-align: center; color: white; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= @data.main.temp_min_c.round %><span class="font-nunito text-xs">&#8451;</span> / <%= @data.main.temp_max_c.round %><span class="font-nunito text-xs">&#8451;</span></div>
+              <div class="PoucasNuvens" style="color: white; font-size: 14px; font-family: Nunito; font-weight: 400; line-height: 19.60px; word-wrap: break-word"><%= @data["weather"][0]["description"] %></div>
             </div>
           </div>
           <div class="Icons" style="width: 160px; height: 160px; left: 175px; top: 144px; position: absolute">
@@ -18,8 +18,8 @@
           </div>
           <div class="Info" style="height: 41px; left: 20px; top: 20px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 223px; display: inline-flex">
             <div class="Location" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: flex">
-              <div class="PortoAlegreRs" style="text-align: center; color: #FAFAFA; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= $data.name %></div>
-              <div class="SegundaFeira15DeMaioDe2023" style="text-align: center; color: #FAFAFA; font-size: 12px; font-family: Nunito; font-weight: 400; line-height: 16.80px; word-wrap: break-word"><%= $data.dt.localtime %></div>
+              <div class="PortoAlegreRs" style="text-align: center; color: #FAFAFA; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= @data.name %></div>
+              <div class="SegundaFeira15DeMaioDe2023" style="text-align: center; color: #FAFAFA; font-size: 12px; font-family: Nunito; font-weight: 400; line-height: 16.80px; word-wrap: break-word"><%= @data.dt.localtime %></div>
             </div>
           </div>
         </div>
