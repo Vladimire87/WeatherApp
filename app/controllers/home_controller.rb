@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   def show
     @city = current_city
     @data = fetch_weather_data(@city)
+    helpers.weather_icon(@data)
   end
 
   private
