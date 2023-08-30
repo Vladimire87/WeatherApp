@@ -19,7 +19,7 @@
           <div class="Info" style="height: 41px; left: 20px; top: 20px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 223px; display: inline-flex">
             <div class="Location" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: flex">
               <div class="PortoAlegreRs" style="text-align: center; color: #FAFAFA; font-size: 16px; font-family: Nunito; font-weight: 700; line-height: 22.40px; word-wrap: break-word"><%= @data.name %></div>
-              <div class="SegundaFeira15DeMaioDe2023" style="text-align: center; color: #FAFAFA; font-size: 12px; font-family: Nunito; font-weight: 400; line-height: 16.80px; word-wrap: break-word"><%= @data.dt.localtime %></div>
+              <div class="SegundaFeira15DeMaioDe2023" style="text-align: center; color: #FAFAFA; font-size: 12px; font-family: Nunito; font-weight: 400; line-height: 16.80px; word-wrap: break-word"><%= local_time(@data.dt, '%A %M') %></div>
             </div>
           </div>
         </div>

@@ -102,6 +102,7 @@ GEM
       activesupport (>= 5.0.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
+    local_time (2.1.0)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -248,6 +249,7 @@ DEPENDENCIES
   geocoder (~> 1.8)
   importmap-rails
   jbuilder
+  local_time
   open-weather-ruby-client (~> 0.4.0)
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)
