@@ -2,7 +2,7 @@
 <div class="Card" style="align-self: stretch; height: 328px; padding: 12px; background: #16161F; border-radius: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
   <div class="Today" style="width: 335px; height: 304px; position: relative; border-radius: 8px; overflow: hidden; background-image: url(https://via.placeholder.com/335x304)">
     <div class="Background" style="width: 335px; height: 304px; left: 0px; top: 0px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-      <img class="Image" style="width: 335px; height: 304px" src="<%= asset_path(@bg)%>" />
+      <img class="Image" style="width: 335px; height: 304px" src="<%= asset_path(@bg) %>" />
     </div>
     <div class="Weather" style="padding: 4px; left: 16px; top: 172px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; display: inline-flex">
       <div class="C" style="text-align: right; color: white; font-size: 48px; font-family: Nunito; font-weight: 800; line-height: 57.60px; word-wrap: break-word"><%= @data.main.temp_c.round %><span class="font-nunito text-4xl">&#8451;</span></div>
