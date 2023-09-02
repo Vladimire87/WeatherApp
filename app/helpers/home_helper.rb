@@ -48,7 +48,8 @@ module HomeHelper
         @icon = 'icon/scattered_clouds'
       end
     else
-      'clouds'
+      @bg = 'Weather=Few Clouds, Moment=Night.png'
+      @icon = 'icon/scattered_clouds'
     end
   end
 
