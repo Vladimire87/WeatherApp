@@ -53,16 +53,10 @@ module HomeHelper
     end
   end
 
-  # def weather_bg(data)
-  #   icon = data['weather'][0]['icon'].downcase
+  def visibility(data)
+    @visibility = data.visibility
+    km = 1000
+    @visibility = @visibility / km
+  end
 
-  #   case icon
-  #   when 'clear sky'
-  #     'icon/weather_clouds_day'
-  #   when 'few clouds'
-  #     'icon/few_clouds'
-  #   else
-  #     'clouds'
-  #   end
-  # end
 end
